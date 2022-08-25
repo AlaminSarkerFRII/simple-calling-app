@@ -7,7 +7,6 @@ const socket = require("socket.io");
 const io = socket(server);
 
 const users = {};
-
 const socketToRoom = {};
 
 io.on('connection', socket => {
@@ -46,7 +45,7 @@ io.on('connection', socket => {
     });
 });
 // step : 3
-if(process.env.NODE_ENV=="production"){
+if(process.env.NODE_ENV == "production"){
     app.use(express.static("client/build"))
 }
 
