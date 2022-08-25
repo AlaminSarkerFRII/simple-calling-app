@@ -44,11 +44,8 @@ io.on('connection', socket => {
             users[roomID] = room;
         }
     });
-
 });
-
 // step : 3
-
 if(process.env.NODE_ENV=="production"){
     app.use(express.static("client/build"))
 }
